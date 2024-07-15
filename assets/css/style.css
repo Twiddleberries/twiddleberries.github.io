@@ -10,60 +10,49 @@ body {
   background-color: #f2f7ff;
 }
 
+main {
+  margin-left: 6% !important;
+  margin-right: 6% !important;
+}
+
 p {
   font-family: "Roboto Mono";
   color: #6b0e0e;
-  margin-left: 6% !important;
-  margin-right: 6% !important;
 }
 
 a {
   font-family: "Roboto Mono";
   color: #baa2a2;
-  margin-left: 6% !important;
-  margin-right: 6% !important;
 }
 
 h1 {
   font-family: "Roboto Mono";
   color: #540a0a;
-  margin-left: 6% !important;
-  margin-right: 6% !important;
 }
 
 h2 {
   font-family: "Roboto Mono";
   color: #540a0a;
-  margin-left: 6% !important;
-  margin-right: 6% !important;
 }
 
 h3 {
   font-family: "Roboto Mono";
   color: #540a0a;
-  margin-left: 6% !important;
-  margin-right: 6% !important;
 }
 
 h4 {
   font-family: "Roboto Mono";
   color: #540a0a;
-  margin-left: 6% !important;
-  margin-right: 6% !important;
 }
 
 li {
   font-family: "Roboto Mono";
   color: #6b0e0e;
-  margin-left: 6% !important;
-  margin-right: 6% !important;
 }
 
 code {
   font-family: monospace;
   color: #ffffff;
-  margin-left: 6% !important;
-  margin-right: 6% !important;
 }
 
 .soundbutton {
