@@ -88,17 +88,12 @@ code {
 
 .bg1 {
   background-color: #540a0a !important;
-  color: #ffffff !important;
+  color: #ffffff;
   padding: 10px;
 }
 
 .bg2 {
   background-color: #2a334a !important;
-  color: #ffffff !important;
+  color: #ffffff;
   padding: 10px
-}
-
-p.bg1, h1.bg1, h2.bg1, h3.bg1, h4.bg1, li
-bg1 {
-  color: #ffffff !important;
 }
