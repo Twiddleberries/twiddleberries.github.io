@@ -6,10 +6,13 @@ html {
   background-color: #f2f7ff;
 }
 
+p h1 h2 h3 h4 a li {
+  margin-left: 6% !important;
+  margin-right: 6% !important;
+}
+
 body {
   background-color: #f2f7ff;
-  margin-left: 10% !important;
-  margin-right: 10% !important;
 }
 
 p {
