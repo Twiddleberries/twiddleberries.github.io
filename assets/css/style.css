@@ -2,6 +2,8 @@
 
 body {
   background-color: #f2f7ff;
+  margin-top: 4em;
+  overflow-x: hidden;
 }
 
 p {
