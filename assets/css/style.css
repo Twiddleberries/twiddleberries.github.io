@@ -8,9 +8,14 @@ html {
 
 body {
   background-color: #f2f7ff;
+  overflow-x: hidden;
 }
 
-h1, h2, h3, h4, p, li, code {
+main {
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, p, code {
   margin-left: 6% !important;
   margin-right: 6% !important;
 }
