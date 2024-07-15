@@ -10,7 +10,7 @@ body {
   background-color: #f2f7ff;
 }
 
-main {
+h1, h2, h3, h4, p, a, li, code {
   margin-left: 6% !important;
   margin-right: 6% !important;
 }
