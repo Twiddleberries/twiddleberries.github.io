@@ -11,7 +11,7 @@ p {
   color: #6b0e0e;
 }
 
-p {
+a {
   font-family: "Roboto Mono";
   color: #baa2a2;
 }
@@ -34,4 +34,14 @@ h3 {
 h4 {
   font-family: "Roboto Mono";
   color: "#540a0a";
+}
+
+li {
+  font-family: "Roboto Mono";
+  color: #6b0e0e;
+}
+
+code {
+  font-family: monospace;
+  color: #ffffff;
 }
