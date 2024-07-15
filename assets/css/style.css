@@ -71,3 +71,13 @@ code {
 .soundbutton:hover {
     background-color: #555;
 }
+
+.bg1 {
+  background-color: #540a0a !important;
+  color: #ffffff !important;
+}
+
+.bg2 {
+  background-color: #2a334a !important;
+  color: #ffffff !important;
+}
