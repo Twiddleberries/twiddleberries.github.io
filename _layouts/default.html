@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  {% include head.html %}
+  
+  <body style="margin:0;">
+
+    <!--<div class="corners" id="loader">
+	<div class="corner corner--1"></div>
+	<div class="corner corner--2"></div>
+	<div class="corner corner--3"></div>
+	<div class="corner corner--4"></div>
+    </div>-->
+    
+    <main style="padding-top: 0 !important;">
+      
+        {% include navigation.html %}
+
+	<br>
+        {{ content }}
+        <!-- page content -->
+        <div class="soundbutton" id="soundButton" xyz="fade rotate-right delay-4">
+          <i class="fas fa-play xyz-in"></i>
+        </div>
+      <audio id="soundtrack" loop>
+        <source src="/assets/" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      
+      {% include footer.html %}
+      
+    </main>
+
+    <!-- add javascript -->
+    <script type="text/javascript" src="https://twiddleberries.github.io/assets/js/main.js"></script>
+    
+  </body>
+  
+</html>
