@@ -101,3 +101,12 @@ soundButton.addEventListener('click', () => {
 
 
 ScrollReveal().reveal('.main');
+
+
+//userfront
+
+import Userfront from "@userfront/core";
+
+Userfront.init("vnd98w9b");
+
+Userfront.user;
