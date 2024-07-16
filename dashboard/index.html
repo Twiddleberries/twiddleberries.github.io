@@ -38,21 +38,31 @@ title: Dash
 <div>
   <div class="dashboard">
     <img id="user-image" src="" alt="User Image">
-    <h2 id="user-name">Name</h2>
-    <p id="user-email">Email</p>
+    <h1 id="user-name">Name</h1>
+    <h3 id="user-email">Email</h3>
   </div>
 </div>
 
+<h1>Welcome to the Dashboard!</h1>
+<p>This page is still work in progress and will be improves in the future. Do note that logging out and returning to this page may break things.</p>
+
 <script>
-  function displayUserInfo() {
-    const user = Userfront.user;
-    if (user) {
-      document.getElementById("user-image").src = user.image;
-      document.getElementById("user-name").innerText = user.name;
-      document.getElementById("user-email").innerText = user.email;
-    }
-  }
-  
-  // Execute function after the DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', displayUserInfo);
+import Userfront from "@userfront/core";
+Userfront.init("vnd98w9b");
+        
+  // Function to display user info
+        function displayUserInfo() {
+            const user = Userfront.user;
+            if (user) {
+                console.log(user); // Debugging: log the user object to the console
+                document.getElementById("user-image").src = user.image || 'default-image-url';
+                document.getElementById("user-name").innerText = user.name || 'No name provided';
+                document.getElementById("user-email").innerText = user.email || 'No email provided';
+            } else {
+                console.error('User not found');
+            }
+        }
+
+        // Execute function after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', displayUserInfo);
 </script>
