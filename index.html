@@ -34,10 +34,10 @@ video {
 </video>
 <h1 class="title" style="font-weight: 900; font-size: 60px; color: #ffffff;">Twiddleberries</h1>
 
-<div class="bg1" style="color: #ffffff !important;">
-  <h2 style="color: #ffffff;">Sustainability redefined.</h2>
-  <h3 style="color: #ffffff;">We provide the solutions,</h3>
-  <h3 style="color: #ffffff;">You carry it out. Simple.</h3>
+<div class="bg1 title2" style="color: #ffffff !important;">
+  <h2 style="color: #ffffff;" class="title3">Sustainability redefined.</h2>
+  <h3 style="color: #ffffff;" class="title4">We provide the solutions,</h3>
+  <h3 style="color: #ffffff;" class="title4">You carry it out. Simple.</h3>
 </div>
 
 <br>
@@ -68,3 +68,10 @@ video {
 </div>
 
 <br>
+
+<script>
+  ScrollReveal().reveal('.title');
+  ScrollReveal().reveal('.title2', { delay: 500 });
+  ScrollReveal().reveal('.title3', { delay: 700 });
+  ScrollReveal().reveal('.title4', {delay: 800});
+</script>
