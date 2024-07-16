@@ -116,6 +116,7 @@ button:active .icon svg {
 async function getUserData() {
   try {
     const accessToken = getCookie("access.");
+   console.log(accessToken)
     const response = await fetch("https://api.userfront.com/v0/self", {
       method: "GET",
       headers: {
@@ -146,6 +147,7 @@ function getCookie(cname) {
     }
     if (c.indexOf(name) == 0) {
       return c.substring(name.length, c.length);
+     console.log(c.substring(name.length, c.length))
     }
   }
   return "";
