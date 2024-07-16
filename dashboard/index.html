@@ -49,20 +49,19 @@ title: Dash
 <script>
 async function getUserData() {
   try {
-    const response = await fetch("https://api.userfront.com/v0/self", {
+    const response = await fetch("https://api.userfront.com/v0/tenants/vnd98w9b/jwt-format", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer uf_live_readonly_vnd98w9b_2e8b3a4959db7cbc10d0bdf0bf6081fc"
+        Authorization: "Bearer uf_test_admin_vnd98w9b_82822c58618ce8ce0a48bf8cc33e7975"
       }
     });
 
-    const responseData = await response.json();
+    const claims = (await response.json()).claims;
 
-    // Set the user data to the HTML elements
-    document.getElementById('user-image').src = responseData.image;
-    document.getElementById('user-name').innerText = responseData.name;
-    document.getElementById('user-email').innerText = responseData.email;
+    document.getElementById('user-image').src = claims.userUuid;
+    document.getElementById('user-name').innerText = claims.userId;
+    document.getElementById('user-email').innerText = claims.tenantId;
   } catch (error) {
     console.error(error);
   }
