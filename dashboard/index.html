@@ -59,9 +59,9 @@ async function getUserData() {
 
     const claims = (await response.json()).claims;
 
-    document.getElementById('user-image').src = claims.picture;
-    document.getElementById('user-name').innerText = claims.name;
-    document.getElementById('user-email').innerText = claims.email;
+    document.getElementById('user-image').src = claims.picture.source;
+    document.getElementById('user-name').innerText = claims.name.source;
+    document.getElementById('user-email').innerText = claims.email.source;
   } catch (error) {
     console.error(error);
   }
