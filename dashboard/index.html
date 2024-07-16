@@ -3,7 +3,32 @@ layout: default
 title: Dash
 ---
 
+
 <h1>Thanks for Signing Up!</h1>
 <h2>However this feature is still being worked on and will take a while...</h2>
 
 <p>Sorry for the inconvenience caused!</p>
+
+<div id="dashboard"></div>
+
+<script>
+const response = await fetch("https://api.userfront.com/v0/self", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: "Bearer uf_live_readonly_vnd98w9b_2e8b3a4959db7cbc10d0bdf0bf6081fc"
+  }
+});
+
+console.log(await response.json());
+const userData = await response.json();
+
+const email = userData.email;
+const name = userData.name;
+
+// Update dashboard HTML
+document.getElementById('dashboard').innerHTML = `
+  <h2>Welcome, ${name}!</h2>
+  <p>Your email address is: ${email}</p>
+`;
+</script>
