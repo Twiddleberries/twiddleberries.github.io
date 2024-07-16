@@ -57,11 +57,11 @@ async function getUserData() {
       }
     });
 
-    const claims = (await response.json()).claims;
+    const claims = response.json().claims;
 
-    document.getElementById('user-image').src = claims.picture.source.split('.').pop();
-    document.getElementById('user-name').innerText = claims.name.source.split('.').pop();
-    document.getElementById('user-email').innerText = claims.email.source.split('.').pop();
+          document.getElementById('user-image').src = claims.picture.source;
+          document.getElementById('user-name').innerText = claims.name.source;
+          document.getElementById('user-email').innerText = claims.email.source;
   } catch (error) {
     console.error(error);
   }
