@@ -115,14 +115,11 @@ button:active .icon svg {
 <script>
  
 function getCookie(name) {
-  console.log('Getting cookie:', name);
-  const value = `; ${document.cookie}`;
-  console.log('Document cookie:', value);
-  const parts = value.split(`; ${name}=`);
-  console.log('Parts:', parts);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-  console.log('Returning null');
-  return null;
+  console.log(`Getting cookie: ${name}`);
+  const cookieRegex = new RegExp(`(?<=${name}.)[^;]*`);
+  const value = document.cookie.match(cookieRegex);
+  console.log(`Cookie value: ${value}`);
+  return value ? value[0] : null;
 }
  
 async function getUserData() {
