@@ -49,7 +49,7 @@ title: Dash
 <script>
 async function getUserData() {
   try {
-    const response = await fetch("https://api.userfront.com/v0/tenants/vnd98w9b/jwt-format", {
+    const response = await fetch("https://api.userfront.com/v0/tenants/vnd98w9b/jwt-format/available-claims", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -59,9 +59,9 @@ async function getUserData() {
 
     const claims = (await response.json()).claims;
 
-    document.getElementById('user-image').src = claims.userUuid;
-    document.getElementById('user-name').innerText = claims.userId;
-    document.getElementById('user-email').innerText = claims.tenantId;
+    document.getElementById('user-image').src = claims.image;
+    document.getElementById('user-name').innerText = claims.name;
+    document.getElementById('user-email').innerText = claims.email;
   } catch (error) {
     console.error(error);
   }
