@@ -99,12 +99,10 @@ code {
   style: block;
 }
 #mouse-scroll {
-  position: fixed;
-  margin: auto;
-  left: 50%;
-  top: 80px;
+  position: static;
+  margin: 0 auto;
   -webkit-transform: translateX(-50%);
-  z-index: 9999;
+  z-index: 99;
 }
 #mouse-scroll span{
   display: block;
