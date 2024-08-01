@@ -46,13 +46,13 @@ title: Solutions
   <h2 class="whitetext">Targetted at students, made with the future in mind.</h2>
 </div>
 
-<div class="icon1">
+<!--<div class="icon1">
   <i class="fa-solid fa-magnifying-glass"></i>
 </div>
 
 <div class="icon2">
   <i class="fa-solid fa-magnifying-glass"></i>
-</div>
+</div>-->
 
 <div class="solution1 solution">
   <h2 class="whitetext">Problem: Water Wastage</h1>
@@ -102,4 +102,17 @@ title: Solutions
     document.querySelector('.solution2'),
   ];
   ScrollReveal().reveal('.solution', { interval: 400 });
+
+const sections = document.querySelectorAll('div');
+const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF']; // Add your colors here
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  sections.forEach((section, index) => {
+    const top = section.offsetTop;
+    const bottom = top + section.offsetHeight;
+    if (scrollPosition >= top && scrollPosition < bottom) {
+      document.body.style.backgroundColor = colors[index % colors.length];
+    }
+  });
 </script>
