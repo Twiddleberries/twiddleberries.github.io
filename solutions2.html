@@ -1,0 +1,317 @@
+---
+layout: default
+title: Solutions
+---
+
+<style>
+  .whitetext {
+    color: #ffffff;
+  }
+  
+  .solution1 {
+    background-color: #1a1a1a;
+    border-radius: 2px;
+    width: 80%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 8px;
+  }
+
+  .solution2 {
+    background-color: #3f4054;
+    border-radius: 2px;
+    width: 80%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 8px;
+  }
+
+  .icon1 {
+    position: sticky;
+    left: 8%;
+    scale: 1.5;
+  }
+  
+  .icon2 {
+    position: sticky;
+    left: 92%;
+    scale: 1.5;
+  }
+
+  .bottom {
+    position: fixed;
+    bottom: -30px;
+    left: 0%;
+    z-index: 999;
+  }
+
+/* ---------- Fog ---------- */
+.fogwrapper {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+  filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+}
+#foglayer_01, #foglayer_02, #foglayer_03 {
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 200%;
+}
+#foglayer_01 .image01, #foglayer_01 .image02,
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02 {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+#foglayer_01 {
+  -webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  -moz-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+}
+#foglayer_02, #foglayer_03 {
+  -webkit-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  -moz-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+}
+
+/* ---------- Moving Fog ---------- */
+/*
+  'size: cover' || 'size: 100%'; results remain the same
+  'attachment: scroll' can be added or removed; results remain the same
+  'attachment: fixed' causing unexpected results in Chrome
+  'repeat-x' || 'no-repeat'; results remain the same
+*/ 
+#foglayer_01 .image01, #foglayer_01 .image02 {
+  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png") center center/cover no-repeat transparent;
+}
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02{
+  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png") center center/cover no-repeat transparent;
+}
+
+/* ---------- Keyframe Layer 1 ---------- */
+@-webkit-keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .28; }
+  58% { opacity: .4; }
+  80% { opacity: .16; }
+  100% { opacity: .1; }
+}
+@-moz-keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .28; }
+  58% { opacity: .4; }
+  80% { opacity: .16; }
+  100% { opacity: .1; }
+}
+@-o-keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .28; }
+  58% { opacity: .4; }
+  80% { opacity: .16; }
+  100% { opacity: .1; }
+}
+@keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .28; }
+  58% { opacity: .4; }
+  80% { opacity: .16; }
+  100% { opacity: .1; }
+}
+/* ---------- Keyframe Layer 2 ---------- */
+@-webkit-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@-moz-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@-o-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+/* ---------- Keyframe Layer 3 ---------- */
+@-webkit-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@-moz-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@-o-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@keyframes foglayer_03_opacity {
+  0% { opacity: .8; }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+/* ---------- Keyframe moveMe ---------- */
+@-webkit-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@-moz-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@-o-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@media only screen
+  and (min-width: 280px)
+  and (max-width: 767px) {
+    #foglayer_01 .image01, #foglayer_01 .image02,
+    #foglayer_02 .image01, #foglayer_02 .image02,
+    #foglayer_03 .image01, #foglayer_03 .image02 {
+      width: 100%;
+    }
+  }
+</style>
+
+<div class="bg1">
+  <h1 style="font-size: 40px" class="whitetext">Sustainable Solutions</h1>
+  <!--<h2 class="whitetext">Targetted at students, made with the future in mind.</h2>-->
+</div>
+
+<!--<div class="icon1">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</div>
+
+<div class="icon2">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</div>-->
+
+<div class="solution1 solution">
+  <h2 class="whitetext">Introduction: Sustainability amongst Students</h1>
+  <br>
+  <h4 class="whitetext">For a GESS Social Studies project.</h4>
+  <p class="whitetext">By: Trio, Ethan (Tan and Low) and Dylan</p>
+  <br>
+  <div id="mouse-scroll">
+    <div class="mouse">
+      <div class="mouse-in"></div>
+    </div>
+    <div>
+      <span class="down-arrow-1"></span>
+      <span class="down-arrow-2"></span>
+      <span class="down-arrow-3"></span>
+    </div>
+  </div>
+  <br>
+</div>
+
+<div class="solution1 solution">
+  <h2 class="whitetext">Problem: Water Wastage</h1>
+  <h4 class="whitetext">Based on a 2022 survey done on 13 year olds, it was shown that more than 50% of respondants showered for more than 20 minutes.</h4>
+  <p class="whitetext">This is rather concerning since the amount of water used could be put to use elsewhere.</p>
+  <p class="whitetext">Therefore, we decided that Water Wastage would be a problem we want to work on.</p>
+</div>
+
+<div class="solution1 solution">
+  <h2 class="whitetext">Respondent Willingness</h1>
+  <h4 class="whitetext">This shows how willing the respondents were to actively contribute to protecting the environment:</h2>
+  <img src="/assets/img/IMG_2143.jpeg" width="90%" height="auto">
+</div>
+
+<div class="solution1 solution">
+  <h2 class="whitetext">Pie Chart</h1>
+  <h4 class="whitetext">This shows the mentioned data above:</h2>
+  <img src="/assets/img/IMG_2142.jpeg" width="90%" height="auto">
+</div>
+
+<div class="solution2 solution">
+  <h2 class="whitetext">Solution 1:</h1>
+  <h4 class="whitetext">Description of solution, why is it good.</h2>
+</div>
+
+<div class="solution2 solution">
+  <h2 class="whitetext">Solution 2:</h1>
+  <h4 class="whitetext">Description of solution, why is it good.</h2>
+</div>
+
+<div class="solution2 solution">
+  <h2 class="whitetext">Solution 3:</h1>
+  <h4 class="whitetext">Description of solution, why is it good.</h2>
+</div>
+
+<div class="solution1 solution">
+  <h2 class="whitetext">Limitation of Data</h1>
+  <ul>
+    <li class="whitetext">The respondents could have faked their responses, which would affect data significantly.</li>
+    <li class="whitetext">Data on shower time which will affect accuracy of the predictions and data.</li>
+  </ul>
+</div>
+
+<br>
+<br>
+
+<img class="bottom" src="/assets/darkforestbottom.png" width="100%" height="auto">
+
+<div id="foglayer_01" class="fog">
+  <div class="image01"></div>
+  <div class="image02"></div>
+</div>
+<div id="foglayer_02" class="fog">
+  <div class="image01"></div>
+  <div class="image02"></div>
+</div>
+<div id="foglayer_03" class="fog">
+  <div class="image01"></div>
+  <div class="image02"></div>
+</div>
+
+<script>
+  var array = [
+    document.querySelector('.solution1'),
+    document.querySelector('.solution2'),
+  ];
+  ScrollReveal().reveal('.solution', { interval: 400 });
+</script>
